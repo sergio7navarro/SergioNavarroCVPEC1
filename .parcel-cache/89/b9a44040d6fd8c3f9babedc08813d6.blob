@@ -1,0 +1,736 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+/**
+ * Import variables
+ */
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+/*------------------------------------*\
+  #ESTILOS-GENERALES
+\*------------------------------------*/
+@import "@fortawesome/fontawesome-free/css/all.css";
+html {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+  margin: 0px;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  margin-left: 20px;
+  color: #00a3e1;
+}
+
+h2 {
+  margin-left: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.blue {
+  font-size: 16px;
+  color: #00a3e1;
+}
+
+h3 {
+  margin-left: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  text-decoration-line: underline;
+  text-decoration-color: #00a3e1;
+}
+
+h4 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+footer {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  margin-left: 30px;
+  list-style: none;
+  border-left: thick solid #00a3e1;
+}
+
+li {
+  margin-left: -20px;
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  margin-left: var(--width-collapsed);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #2c2d2f;
+}
+
+.minombre {
+  margin-top: 200px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.slogan {
+  margin-bottom: 200px;
+  font-size: 40px;
+  text-align: center;
+}
+
+/*------------------------------------*\
+  #MENU
+\*------------------------------------*/
+:root {
+  --width: 300px;
+  --bgcolor: #17181b;
+  --hovercolor: rgb(23,23,23);
+  --width-collapsed: 50px;
+}
+
+.body-expanded {
+  margin-left: var(--width);
+}
+
+#main-container {
+  margin-left: 15%;
+  color: white;
+}
+
+#sidemenu a {
+  color: white;
+  text-decoration: none;
+}
+
+/*HEADER*/
+#sidemenu #header {
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header #title {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#sidemenu #header #title, #sidemenu #header #menu-btn {
+  vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#sidemenu #header #menu-btn:hover {
+  background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .btn-hamburger {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+/* PROFILE */
+#sidemenu #profile {
+  padding: var(--padding) 0;
+  text-align: center;
+  border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #profile #photo {
+  box-sizing: border-box;
+  padding: var(--padding);
+  margin: 0 auto;
+}
+
+#sidemenu #profile #photo img {
+  width: 80%;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+}
+
+#sidemenu #profile #photo, #sidemenu #profile #name {
+  padding: var(--padding) 0;
+  overflow: hidden;
+  font-size: 24px;
+}
+
+/* ITEM */
+#sidemenu #menu-items {
+  overflow: hidden;
+}
+
+#sidemenu #menu-items .item {
+  width: var(--width);
+}
+
+#sidemenu #menu-items .item .title {
+  display: inline-block;
+  padding: var(--padding) 0;
+  overflow: hidden;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+#sidemenu #menu-items .item a {
+  display: block;
+}
+
+#sidemenu #menu-items .item a:hover {
+  background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon {
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--width-collapsed);
+  padding: var(--padding);
+  overflow: hidden;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+#sidemenu #menu-items .item .icon img {
+  width: 100%;
+}
+
+#sidemenu #menu-items .item.separator {
+  height: 1px;
+  margin: 15px 0;
+  border-bottom: solid 1px var(--hovercolor);
+}
+
+.menu-expanded {
+  width: var(--width);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-expanded #header #title {
+  display: inline-block;
+  width: calc(100% - 50%);
+  padding: var(--padding);
+  margin-right: -5px;
+}
+
+.menu-expanded #header #title span {
+  width: calc(var(--width) - var(--width-collapsed) - 5px);
+  overflow: hidden;
+}
+
+.menu-expanded #profile #photo {
+  width: 200px;
+}
+
+.menu-expanded #profile #name {
+  width: 100%;
+}
+
+.menu-collapsed #header #title {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-collapsed #profile #name {
+  display: none;
+}
+
+.menu-collapsed .item {
+  width: 100px;
+}
+
+@media all and (min-width: 640px) {
+  #sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    color: white;
+    background-color: var(--bgcolor);
+  }
+}
+/*------------------------------------*\
+  #FORMULARIO
+\*------------------------------------*/
+.contact_form {
+  width: 460px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px;
+}
+
+input {
+  width: 408px;
+  height: 40px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px;
+}
+
+textarea {
+  width: 405px;
+  height: 150px;
+  padding-top: 15px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+
+label {
+  display: block;
+  float: center;
+}
+
+button {
+  width: 420px;
+  height: 45px;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: white;
+  border-color: #2c2d2f;
+  border-style: solid;
+}
+
+button p {
+  color: #00a3e1;
+}
+
+.formulario {
+  margin-left: 20px;
+  color: white;
+}
+
+span {
+  color: white;
+}
+
+.aviso {
+  font-size: 13px;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+  color: #a8a8a8;
+}
+
+.formulario input:focus {
+  border: 1px solid #97d848;
+  outline: 0;
+}
+
+.formulario textarea:focus {
+  border: 1px solid #97d848;
+  outline: 0;
+}
+
+/*------------------------------------*\
+  #ESTILOS-GENERALES-MOVIL
+\*------------------------------------*/
+@media all and (max-width: 640px) {
+  html {
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+  }
+
+  .home {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    margin-left: 20px;
+    color: #00a3e1;
+  }
+
+  h2 {
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+  }
+
+  .blue {
+    font-size: 16px;
+    color: #00a3e1;
+  }
+
+  h3 {
+    margin-left: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: #00a3e1;
+  }
+
+  h4 {
+    margin-left: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    color: white;
+  }
+
+  p {
+    width: 85%;
+    margin: 0;
+    margin-left: 18px;
+  }
+
+  footer {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  ul {
+    margin-left: 30px;
+    list-style: none;
+    border-left: thick solid #00a3e1;
+  }
+
+  li {
+    margin-left: -20px;
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #2c2d2f;
+  }
+
+  .minombre {
+    margin-top: 200px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .slogan {
+    margin-bottom: 200px;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+/*------------------------------------*\
+  #MENU-MOVIL
+\*------------------------------------*/
+@media all and (max-width: 640px) {
+  :root {
+    --width: 300px;
+    --padding: 10px ;
+    --bgcolor: #17181b ;
+    --hovercolor: rgb(23,23,23) ;
+    --width-collapsed: 50px;
+  }
+
+  .body-expanded {
+    margin-left: var(--width);
+  }
+
+  #main-container {
+    margin-left: 0%;
+    color: white;
+  }
+
+  #sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: white;
+    background-color: var(--bgcolor);
+  }
+
+  #sidemenu a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*HEADER*/
+  #sidemenu #header {
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+  }
+
+  #sidemenu #header #title {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #sidemenu #header #title, #sidemenu #header #menu-btn {
+    vertical-align: middle;
+  }
+
+  #sidemenu #header #menu-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    width: var(--width-collapsed);
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #sidemenu #header #menu-btn:hover {
+    background-color: var(--hovercolor);
+  }
+
+  #sidemenu #header #menu-btn .btn-hamburger {
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: white;
+  }
+
+  /* PROFILE */
+  #sidemenu #profile {
+    padding: var(--padding) 0;
+    text-align: center;
+    border-bottom: solid 1px var(--hovercolor);
+  }
+
+  #sidemenu #profile #photo {
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+  }
+
+  #sidemenu #profile #photo img {
+    width: 60%;
+    border-radius: 50%;
+  }
+
+  #sidemenu #profile #photo, #sidemenu #profile #name {
+    padding: var(--padding) 0;
+    overflow: hidden;
+    font-size: 24px;
+  }
+
+  /* ITEM */
+  #sidemenu #menu-items {
+    overflow: hidden;
+  }
+
+  #sidemenu #menu-items .item {
+    width: var(--width);
+  }
+
+  #sidemenu #menu-items .item .title {
+    display: inline-block;
+    padding: var(--padding) 0;
+    overflow: hidden;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  #sidemenu #menu-items .item a {
+    display: block;
+  }
+
+  #sidemenu #menu-items .item a:hover {
+    background-color: var(--hovercolor);
+  }
+
+  #sidemenu #menu-items .item .icon {
+    box-sizing: border-box;
+    display: inline-block;
+    width: var(--width-collapsed);
+    padding: var(--padding);
+  }
+
+  #sidemenu #menu-items .item .icon img {
+    width: 100%;
+  }
+
+  #sidemenu #menu-items .item.separator {
+    height: 1px;
+    margin: 15px 0;
+    border-bottom: solid 1px var(--hovercolor);
+  }
+
+  .menu-expanded {
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-expanded #header #title {
+    display: inline-block;
+    width: calc(100% - 50%);
+    padding: var(--padding);
+    margin-right: -5px;
+  }
+
+  .menu-expanded #header #title span {
+    display: inline-block;
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+  }
+
+  .menu-expanded #profile #photo {
+    width: 200px;
+  }
+
+  .menu-expanded #profile #name {
+    width: 100%;
+  }
+
+  .menu-collapsed {
+    width: var(--width-collapsed);
+  }
+
+  .menu-collapsed #header #title {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-collapsed #profile #name {
+    display: none;
+  }
+
+  .menu-collapsed .item {
+    width: 100px;
+  }
+}
+/*------------------------------------*\
+  #FORMULARIO-MOVIL
+\*------------------------------------*/
+@media all and (max-width: 640px) {
+  .contact_form {
+    width: 460px;
+    height: auto;
+  }
+
+  input {
+    width: 60%;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  textarea {
+    width: 60%;
+    height: 150px;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #fbfbfb;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  label {
+    display: block;
+    float: center;
+    margin-left: 20px;
+  }
+
+  button {
+    width: 60%;
+    height: 45px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: white;
+    border-color: #2c2d2f;
+    border-style: solid;
+  }
+
+  button p {
+    color: #00a3e1;
+  }
+
+  .formulario {
+    margin-left: 5px;
+    color: white;
+  }
+
+  span {
+    color: white;
+  }
+
+  .aviso {
+    font-size: 13px;
+    color: white;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #a8a8a8;
+  }
+
+  ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+  }
+
+  .formulario input:focus {
+    border: 1px solid #97d848;
+    outline: 0;
+  }
+
+  .formulario textarea:focus {
+    border: 1px solid #97d848;
+    outline: 0;
+  }
+}
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+/**
+ * Do NOT include anything else in this file!
+ */

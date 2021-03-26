@@ -1,0 +1,181 @@
+
+/*------------------------------------*\
+  #MENU
+\*------------------------------------*/
+:root {
+    --width: 300px;
+    --bgcolor: #17181b;
+    --hovercolor: rgb(23,23,23);
+    --width-collapsed: 50px; 
+  }
+.body-expanded {
+    margin-left: var(--width);
+}
+
+#main-container{
+    margin-left: 15%;
+    color: white;
+}
+
+
+#sidemenu a {
+    color: white;
+    text-decoration: none;
+}
+
+/*HEADER*/
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header #title {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .btn-hamburger{
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+/* PROFILE */
+#sidemenu #profile {
+    padding: var(--padding) 0;
+    text-align: center;
+    border-bottom: solid 1px var(--hovercolor);
+}
+    
+#sidemenu #profile #photo {
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+
+#sidemenu #profile #photo img{
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+}
+
+#sidemenu #profile #photo, #sidemenu #profile #name{
+    padding: var(--padding) 0;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+/* ITEM */
+#sidemenu #menu-items{
+    overflow: hidden;
+}
+
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+
+
+#sidemenu #menu-items .item .title{
+    display: inline-block;
+    padding: var(--padding) 0;
+    overflow: hidden;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+#sidemenu #menu-items .item a{
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon{
+    box-sizing: border-box;
+    display: inline-block;
+    width: var(--width-collapsed);
+    padding: var(--padding);
+    overflow: hidden;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+
+#sidemenu #menu-items .item.separator{
+    height: 1px;
+    margin: 15px 0;
+    border-bottom: solid 1px var(--hovercolor);
+}
+
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50%);
+    padding: var(--padding);
+    margin-right: -5px;
+}
+
+.menu-expanded #header #title span{
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+}
+
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+
+.menu-expanded #profile #name {
+    width: 100%;
+}
+
+.menu-collapsed #header #title {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-collapsed #profile #name{
+    display:none;
+}
+
+.menu-collapsed .item{
+    width: 100px;
+}
+
+@media all and (min-width: 640px) {
+#sidemenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    color: white;
+    background-color: var(--bgcolor);
+}
+}

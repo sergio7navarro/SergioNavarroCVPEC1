@@ -1,0 +1,97 @@
+/*------------------------------------*\
+  #FORMULARIO
+\*------------------------------------*/
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  border-radius: 0px;  
+}
+
+input{
+   
+  width: 408px; 
+  height: 40px;
+  padding-left: 20px; 
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  border-color: white;
+  border-style: solid; 
+  border-width: 1px;
+  border-radius: 0px; 
+}
+
+
+textarea{
+  width: 405px; 
+  height: 150px;
+  padding-top: 15px;
+  padding-left: 20px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  border-color: white;  
+  border-style: solid; 
+  border-width: 1px; 
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  width: 420px;
+  height: 45px; 
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  margin-left: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color:  white; 
+  border-color: #2c2d2f;
+  border-style: solid; 
+}
+
+
+button p{
+  color: #00a3e1;
+}
+
+.formulario{
+  margin-left: 20px;
+  color: white; 
+}
+
+span{
+  color: white; 
+}
+
+.aviso{
+  font-size: 13px;  
+  color: white;  
+}
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+.formulario input:focus{
+  border: 1px solid #97d848;
+  outline:0;
+}
+
+.formulario textarea:focus{
+  border: 1px solid #97d848;
+  outline:0;
+}
